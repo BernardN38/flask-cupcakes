@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+{% block title %}Homepage{% endblock %}
+
+
+{% block content %}
+<h1 class="display text-center">Homepage</h1>
+<div class="container" id='main-cont'></div>
+
+
+<div class="container">
+    <form action="/api/cupcakes" method='POST'>
+        <label for="flavor">Flavor</label>
+        <input type="text" name="flavor" id="flavor">
+        <label for="size">Size</label>
+        <input type="text" name="size" id='size'>
+        <label for="rating">Rating</label>
+        <input type="text" name="rating" id="rating">
+        <label for="image">Image URL</label>
+        <input type="url" name="image" id="image">
+        <button id="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}
+
+{% block footer %}
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../static/js/index.js"></script>
+{% endblock %}
